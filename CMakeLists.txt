@@ -89,6 +89,15 @@ MESSAGE( STATUS "CMAKE_C_FLAGS_RELEASE: " ${CMAKE_C_FLAGS_RELEASE} )
 add_executable (example ${PROJECT_SOURCE_DIR}/example.c)
 target_link_libraries (example streamvbyte_static)
 
+add_executable (shane ${PROJECT_SOURCE_DIR}/shane.c)
+target_link_libraries (shane streamvbyte_static)
+
+add_executable (shane1 ${PROJECT_SOURCE_DIR}/shane1.c)
+target_link_libraries (shane1 streamvbyte_static)
+
+add_executable (shane2 ${PROJECT_SOURCE_DIR}/shane2.c)
+target_link_libraries (shane2 streamvbyte_static)
+
 if(NOT MSVC)
     # perf
     add_executable (perf ${PROJECT_SOURCE_DIR}/tests/perf.c)
